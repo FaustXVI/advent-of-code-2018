@@ -14,6 +14,14 @@ plugins {
     kotlin("jvm") version "1.3.10"
 }
 
+application {
+    mainClassName = "MainKt"
+}
+
+val run by tasks.getting(JavaExec::class) {
+    standardInput = System.`in`
+}
+
 dependencies {
     compile(kotlin("stdlib"))
     compile(kotlin("reflect"))
